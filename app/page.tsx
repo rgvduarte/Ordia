@@ -3,7 +3,7 @@ import { GoldenSpiral } from '@/components/GoldenSpiral';
 import { BeforeAfter } from '@/components/BeforeAfter';
 import { CtaBanner } from '@/components/CtaBanner';
 import { LeadForm } from '@/components/LeadForm';
-import { methodSteps, services, testimonials, cases } from '@/lib/site';
+import { methodSteps, services, testimonials, cases, positioning } from '@/lib/site';
 import { priceLabel, IVA_NOTE } from '@/lib/format';
 
 export default function HomePage() {
@@ -19,9 +19,10 @@ export default function HomePage() {
               A sua vida, casa e património em ordem.
             </h1>
             <p className="mt-6 max-w-xl text-phi2 text-taupe">
-              Desenhamos e instalamos sistemas calmos para o digital, a casa e o
-              dia a dia. Depois mantemos tudo a funcionar, para que recupere
-              tempo e tranquilidade.
+              Desenhamos e orquestramos sistemas calmos para o digital, a casa e
+              o dia a dia, e dirigimos quem os executa. Uma só pessoa de
+              confiança que torna tudo coerente, para que recupere tempo e
+              tranquilidade.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -43,9 +44,9 @@ export default function HomePage() {
             <p className="label-mono">O que fica resolvido</p>
             <ul className="mt-5 space-y-4">
               {[
-                'Fotografias e documentos arrumados e seguros',
+                'Um arquivo digital com sistema e seguro',
                 'Uma casa que se mantém em ordem sem esforço',
-                'Alguém de confiança a tratar do recorrente',
+                'Um único ponto de confiança a dirigir o recorrente',
               ].map((item) => (
                 <li key={item} className="flex gap-3 text-umbra">
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-umbra/70" />
@@ -70,10 +71,41 @@ export default function HomePage() {
               voltam sempre. Não é falta de vontade, é falta de sistema.
             </p>
             <p>
-              A Ordia existe para resolver isso de raiz. Não arrumamos só uma
-              vez: desenhamos a estrutura, instalamos as regras e mantemos a
-              ordem viva, para que dure muito depois de sairmos.
+              A Ordia existe para resolver isso de raiz. Não vendemos horas de
+              arrumação: desenhamos a estrutura, dirigimos a execução e
+              garantimos que a ordem dura muito depois do projeto fechar.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Posicionamento: desenho e orquestração, não execução */}
+      <section className="container-ordia pb-12">
+        <div className="reveal rounded-[14px] border border-umbra/10 bg-areia/40 p-8 sm:p-12">
+          <div className="grid gap-10 lg:grid-cols-[1.618fr_1fr] lg:items-start">
+            <div>
+              <p className="label-mono">{positioning.eyebrow}</p>
+              <h2 className="mt-4 font-grotesk text-phi3 tracking-tighter text-umbra">
+                {positioning.title}
+              </h2>
+              <p className="mt-4 max-w-xl text-taupe">{positioning.lead}</p>
+              <Link
+                href="/como-trabalhamos"
+                className="mt-6 inline-block text-umbra underline-offset-4 hover:underline"
+              >
+                Como trabalhamos, em detalhe →
+              </Link>
+            </div>
+            <ul className="space-y-5">
+              {positioning.points.map((p) => (
+                <li key={p.title}>
+                  <p className="font-grotesk text-phi2 tracking-tight text-umbra">
+                    {p.title}
+                  </p>
+                  <p className="mt-1 text-[0.95rem] text-taupe">{p.body}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

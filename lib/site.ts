@@ -16,12 +16,35 @@ export const siteConfig = {
 };
 
 export const nav = [
+  { href: '/como-trabalhamos', label: 'Como trabalhamos' },
   { href: '/metodo', label: 'Método' },
   { href: '/servicos', label: 'Serviços' },
   { href: '/casos', label: 'Casos' },
   { href: '/sobre', label: 'Sobre' },
   { href: '/diario', label: 'Diário' },
 ];
+
+// Posicionamento: a Ordia desenha e orquestra, não executa com as próprias
+// mãos. É a arquiteta e o ponto único de confiança do cliente.
+export const positioning = {
+  eyebrow: 'Como trabalhamos',
+  title: 'Desenhamos e dirigimos. Não pomos as mãos na massa.',
+  lead: 'É a diferença entre o arquiteto e o pedreiro. A Ordia define a visão, o conceito e os sistemas, e escolhe e dirige os fornecedores que executam. O cliente tem uma só pessoa de confiança que torna tudo coerente.',
+  points: [
+    {
+      title: 'Do lado do cliente',
+      body: 'As empresas de execução vendem mãos e capacidade, e puxam tudo para o lado delas. A Ordia vende gosto, critério e confiança, e está sempre do lado de quem a contrata.',
+    },
+    {
+      title: 'Um só ponto de confiança',
+      body: 'Em vez de coordenar organizadores, produtoras e equipas, o cliente fala com uma só pessoa, que pensa o todo e responde por ele do princípio ao fim.',
+    },
+    {
+      title: 'Fornecedores dirigidos por nós',
+      body: 'Organizadores, produtoras de eventos e equipas de apoio não são concorrentes: são quem a Ordia escolhe e dirige, em nome do cliente, para garantir a coerência do resultado.',
+    },
+  ],
+};
 
 export const methodSteps = [
   {
@@ -41,16 +64,16 @@ export const methodSteps = [
   {
     n: '03',
     title: 'Instalar',
-    summary: 'Pomos o sistema a funcionar, na prática.',
+    summary: 'Dirigimos a execução, do princípio ao fim.',
     detail:
-      'Organizamos, arrumamos, configuramos e documentamos. Quando saímos, está tudo no lugar e percebe-se à primeira vista como funciona.',
+      'Escolhemos e dirigimos o apoio e os fornecedores que põem o sistema em prática, e supervisionamos cada detalhe. O cliente não gere ninguém: recebe o resultado pronto e percebe à primeira vista como funciona.',
   },
   {
     n: '04',
     title: 'Manter',
-    summary: 'Acompanhamos para que a ordem dure.',
+    summary: 'Garantimos que a ordem dura.',
     detail:
-      'A ordem não é um evento, é um hábito. Acompanhamos com avenças e revisões periódicas para que o sistema se mantenha vivo sem esforço seu.',
+      'A ordem não é um evento, é um hábito. Acompanhamos com avenças e revisões periódicas, dirigindo quem mantém, para que o sistema se mantenha vivo sem esforço seu.',
   },
 ];
 
@@ -58,9 +81,9 @@ export const services = [
   {
     slug: 'ordem-digital',
     name: 'Ordem Digital',
-    promise: 'A vida digital arrumada e com regras.',
+    promise: 'A vida digital com estrutura e regras.',
     scope:
-      'Fotografias, documentos, contas, palavras-passe e ficheiros. Estrutura, nomes, cópias de segurança e regras que se mantêm.',
+      'Desenhamos a estrutura e as regras da vida digital (fotografias, ficheiros, contas) e dirigimos o trabalho de organização quando há volume. O cliente fica com um sistema que se mantém.',
     result:
       'Encontra tudo em segundos, com tranquilidade e sem caos digital.',
     priceFrom: 900,
@@ -70,9 +93,9 @@ export const services = [
   {
     slug: 'sistema-casa',
     name: 'Sistema Casa',
-    promise: 'A casa a funcionar sozinha.',
+    promise: 'A arquitetura da ordem da casa.',
     scope:
-      'Espaços, despensas, roupeiros, garagem, documentos da casa e fornecedores. Sistemas físicos e rotinas para a família ou para a equipa de apoio.',
+      'Desenhamos o sistema da casa e dirigimos a sua instalação, executada por apoio escolhido e dirigido por nós. Não é arrumação à hora, é a arquitetura da ordem.',
     result: 'Uma casa que se mantém em ordem sem depender de si.',
     priceFrom: 1500,
     priceTo: 4000,
@@ -81,10 +104,10 @@ export const services = [
   {
     slug: 'concierge',
     name: 'Concierge',
-    promise: 'Alguém que trata, todos os meses.',
+    promise: 'O ponto de confiança que coordena tudo.',
     scope:
-      'Avença mensal de gestão: fornecedores, marcações, compras, manutenção e tarefas recorrentes da casa e da vida.',
-    result: 'Liberta tempo e cabeça, com alguém de confiança a tratar.',
+      'O ponto de confiança que coordena e dirige a logística da casa e da vida, todos os meses. Gerimos os fornecedores em nome do cliente, não fazemos as tarefas.',
+    result: 'Liberta tempo e cabeça, com uma só pessoa a dirigir tudo.',
     priceFrom: 600,
     priceTo: 1500,
     unit: 'mês',
@@ -92,9 +115,9 @@ export const services = [
   {
     slug: 'evento',
     name: 'Evento',
-    promise: 'O evento sem stress.',
+    promise: 'Direção criativa e orquestração.',
     scope:
-      'Add-on de planeamento e coordenação de um evento em casa ou fora: logística, fornecedores e dia a dia até ao fim.',
+      'Direção criativa e orquestração: conceito, narrativa, moodboard e a curadoria e direção dos fornecedores que executam. Pensamos e conduzimos o evento, não alugamos nem produzimos.',
     result: 'Recebe ou celebra sem carregar a operação aos ombros.',
     priceFrom: 1500,
     priceTo: null,
