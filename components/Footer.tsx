@@ -25,6 +25,11 @@ export function Footer() {
               <p className="label-mono">Estúdio</p>
               <ul className="mt-4 space-y-2 text-[0.95rem] text-taupe">
                 <li>
+                  <Link href="/como-trabalhamos" className="hover:text-umbra">
+                    Como trabalhamos
+                  </Link>
+                </li>
+                <li>
                   <Link href="/metodo" className="hover:text-umbra">
                     Método
                   </Link>

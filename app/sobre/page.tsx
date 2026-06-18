@@ -129,6 +129,13 @@ export default function SobrePage() {
               o mesmo cuidado com a narrativa que construímos durante anos para
               marcas que perduram.
             </p>
+            <p>
+              Aqui, a Daniela é a arquiteta e diretora criativa do projeto, e o
+              seu ponto único de confiança. Desenha a visão, o conceito e os
+              sistemas, e escolhe e dirige os fornecedores que executam. Nunca a
+              executora: sempre a estratega e a curadora que garante a coerência
+              de tudo.
+            </p>
             <a
               href="https://www.linkedin.com/in/dmsduarte/"
               target="_blank"

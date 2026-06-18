@@ -18,7 +18,7 @@ export function Nav() {
           Ordia
         </Link>
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-7 lg:flex">
           {nav.map((item) => (
             <Link
               key={item.href}
@@ -38,7 +38,7 @@ export function Nav() {
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center md:hidden"
+          className="flex h-10 w-10 items-center justify-center lg:hidden"
           aria-label={open ? 'Fechar menu' : 'Abrir menu'}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -58,7 +58,7 @@ export function Nav() {
       </nav>
 
       {open ? (
-        <div className="border-t border-umbra/10 bg-gesso md:hidden">
+        <div className="border-t border-umbra/10 bg-gesso lg:hidden">
           <div className="container-ordia flex flex-col gap-1 py-4">
             {nav.map((item) => (
               <Link
