@@ -19,9 +19,9 @@ export default function HomePage() {
               A sua vida, casa e património em ordem.
             </h1>
             <p className="mt-6 max-w-xl text-phi2 text-taupe">
-              Desenhamos e orquestramos sistemas calmos para o digital, a casa e
-              o dia a dia, e dirigimos quem os executa. Uma só pessoa de
-              confiança que torna tudo coerente, para que recupere tempo e
+              Desenhamos os sistemas que dão ordem à sua vida digital, à sua
+              casa e ao seu património, e coordenamos quem os concretiza. Uma só
+              pessoa de confiança a pensar o conjunto, para que recupere tempo e
               tranquilidade.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -44,9 +44,9 @@ export default function HomePage() {
             <p className="label-mono">O que fica resolvido</p>
             <ul className="mt-5 space-y-4">
               {[
-                'Um arquivo digital com sistema e seguro',
+                'Um arquivo digital organizado e seguro',
                 'Uma casa que se mantém em ordem sem esforço',
-                'Um único ponto de confiança a dirigir o recorrente',
+                'Um único ponto de confiança para tudo o que é recorrente',
               ].map((item) => (
                 <li key={item} className="flex gap-3 text-umbra">
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-umbra/70" />
@@ -71,9 +71,9 @@ export default function HomePage() {
               voltam sempre. Não é falta de vontade, é falta de sistema.
             </p>
             <p>
-              A Ordia existe para resolver isso de raiz. Não vendemos horas de
-              arrumação: desenhamos a estrutura, dirigimos a execução e
-              garantimos que a ordem dura muito depois do projeto fechar.
+              A Ordia existe para resolver isso de raiz. Desenhamos a
+              estrutura, coordenamos quem a concretiza e garantimos que a ordem
+              dura muito depois de o projeto fechar.
             </p>
           </div>
         </div>
