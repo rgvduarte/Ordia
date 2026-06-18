@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gesso text-umbra font-sans antialiased;
+    font-size: 1.03125rem;
+    line-height: 1.6;
+  }
+
+  ::selection {
+    background-color: #e7c9c5;
+    color: #3b2b22;
+  }
+
+  /* Foco de teclado sempre visível (acessibilidade AA) */
+  :focus-visible {
+    outline: 2px solid #3b2b22;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-grotesk;
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .container-ordia {
+    @apply mx-auto w-full max-w-content px-6 sm:px-8 lg:px-12;
+  }
+
+  /* Filete fino de separação, a assinatura discreta da marca */
+  .rule {
+    @apply border-t border-umbra/10;
+  }
+
+  .label-mono {
+    @apply font-mono text-phi1 uppercase tracking-[0.18em] text-taupe;
+  }
+
+  .link-underline {
+    @apply relative inline-flex items-center gap-2 text-umbra transition-opacity hover:opacity-70;
+  }
+}
+
+@layer utilities {
+  /* Animação subtil de entrada, respeitando prefers-reduced-motion */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
