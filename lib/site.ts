@@ -312,18 +312,44 @@ export const resources = [
   {
     slug: 'guia-por-onde-comecar',
     kind: 'Guia gratuito',
+    format: 'guide',
+    time: '5 min de leitura',
     title: 'Por onde começar a pôr ordem',
     promise:
-      'O guia que mostra os três erros que mantêm a desordem e o primeiro passo para cada área da sua vida.',
+      'Os três erros que mantêm a desordem e o primeiro passo para cada área da sua vida. Leia já o essencial aqui; receba o guia completo em PDF por email.',
     bullets: [
       'Os três erros que mantêm a desordem',
       'O método em quatro passos, resumido',
       'Uma lista para começar este fim de semana',
     ],
+    // Conteúdo real e útil (preview do guia). Skill: lead-magnets.
+    errors: [
+      {
+        title: 'Erro 1: confundir arrumar com organizar',
+        body: 'Arrumar é pôr as coisas no sítio hoje. Organizar é criar um sistema que decide, sozinho, onde tudo fica. Sem sistema, a desordem volta sempre em semanas.',
+      },
+      {
+        title: 'Erro 2: começar pelo mais visível, não pelo que mais pesa',
+        body: 'Arruma-se a gaveta à vista e adia-se o arquivo digital ou os fornecedores, que são o que realmente rouba tempo e cabeça. Comece pelo que pesa, não pelo que se vê.',
+      },
+      {
+        title: 'Erro 3: não definir quem mantém',
+        body: 'Um sistema sem dono morre. Antes de arrumar, decida quem mantém cada área e com que rotina. É isso que faz a ordem durar.',
+      },
+    ],
+    checklist: [
+      'Escolha a área que mais lhe pesa: digital, casa ou recorrente.',
+      'Escreva onde "vive" cada tipo de coisa (uma regra por categoria).',
+      'Elimine duplicados e o que não serve, antes de arrumar.',
+      'Defina uma rotina semanal de 15 minutos para manter.',
+      'Marque um diagnóstico se quiser um sistema feito à medida.',
+    ],
   },
   {
     slug: 'quiz-tipo-de-desordem',
     kind: 'Quiz',
+    format: 'quiz',
+    time: '2 minutos',
     title: 'Que tipo de desordem o trava?',
     promise:
       'Responda a seis perguntas e descubra qual o sistema da Ordia que mais lhe vai mudar o dia a dia.',
