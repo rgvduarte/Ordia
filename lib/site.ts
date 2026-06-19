@@ -183,34 +183,80 @@ export const testimonials = [
   },
 ];
 
+// EDITÁVEL: casos representativos. Substituir por dados e números reais de
+// cliente (com autorização) antes de campanhas pagas. Nomes anonimizados.
 export const cases = [
   {
     slug: 'villa-cascais',
     title: 'Villa em Cascais devolvida à calma',
     segment: 'Segunda casa',
     summary:
-      'Uma villa usada poucos meses por ano, sempre em modo de emergência à chegada. Criámos um sistema de casa e uma avença de concierge.',
+      'Uma villa usada poucos meses por ano, sempre em modo de emergência à chegada. A Ordia desenhou o sistema da casa e assumiu uma avença de concierge.',
     before: 'Chegadas caóticas, despensas sem regra, fornecedores dispersos.',
     after:
-      'Casa pronta a cada chegada, inventário claro e um único ponto de contacto para tudo.',
+      'Casa pronta a cada chegada, inventário claro e um único ponto de contacto.',
+    challenge:
+      'A cada visita, os donos chegavam a uma casa fria: despensa por fazer, piscina por tratar, nove fornecedores diferentes a contactar à última hora. As primeiras 48 horas de cada estadia perdiam-se a organizar, em vez de a descansar.',
+    approach:
+      'Desenhámos o sistema da casa (inventário, despensa-base, manutenção) e passámos a dirigir os fornecedores numa só avença. Antes de cada chegada, coordenamos tudo para que a casa esteja pronta.',
+    outcome:
+      'Os donos passaram a chegar a uma casa a postos, com um só contacto para tudo. As estadias começam a descansar, não a resolver.',
+    metrics: [
+      { value: '9 → 1', label: 'fornecedores num só contacto' },
+      { value: '48h → 0', label: 'tempo a preparar à chegada' },
+      { value: '100%', label: 'chegadas com a casa pronta' },
+    ],
+    testimonial: {
+      quote:
+        'Chegamos e está tudo a postos. Mudou a forma como vivemos a casa.',
+      author: 'Família M.',
+    },
   },
   {
     slug: 'arquivo-digital-familia',
     title: 'Vinte anos de memórias, organizados',
     segment: 'Família',
     summary:
-      'Milhares de fotografias e documentos espalhados por telemóveis, discos e contas. Estruturámos, limpámos e protegemos tudo.',
+      'Milhares de fotografias e documentos espalhados por telemóveis, discos e contas. A Ordia desenhou a estrutura e dirigiu a limpeza e a proteção de tudo.',
     before: 'Duplicados, ficheiros perdidos, sem cópias de segurança.',
     after: 'Arquivo único, com nomes, datas e cópia segura na nuvem.',
+    challenge:
+      'Vinte anos de fotografias e documentos viviam em três telemóveis, dois discos antigos e várias contas. Procurar um documento podia levar uma tarde, e nada tinha cópia de segurança.',
+    approach:
+      'Desenhámos uma estrutura única (pastas, nomes, datas, regras) e dirigimos a consolidação: juntar tudo, eliminar duplicados e configurar uma cópia segura automática.',
+    outcome:
+      'A família passou a ter um só arquivo, encontrável em segundos e protegido. As memórias deixaram de estar reféns de um disco que podia falhar.',
+    metrics: [
+      { value: '~14.000', label: 'ficheiros consolidados' },
+      { value: '3 → 1', label: 'dispositivos num só arquivo' },
+      { value: 'minutos', label: 'para encontrar, antes horas' },
+    ],
+    testimonial: {
+      quote:
+        'Finalmente tudo organizado e seguro. Sinto que recuperei a minha memória.',
+      author: 'Sofia R.',
+    },
   },
   {
     slug: 'escritorio-pme',
     title: 'Uma PME que deixou de perder tempo',
     segment: 'Empresa',
     summary:
-      'Documentos e processos sem dono. Desenhámos uma estrutura partilhada e regras simples para a equipa.',
+      'Documentos e processos sem dono. A Ordia desenhou uma estrutura partilhada e regras simples, e dirigiu a sua adoção pela equipa.',
     before: 'Versões duplicadas, pastas caóticas, tempo perdido a procurar.',
-    after: 'Estrutura partilhada, regras claras e onboarding em minutos.',
+    after: 'Estrutura partilhada, regras claras e integração em minutos.',
+    challenge:
+      'Numa equipa pequena, cada pessoa guardava ficheiros à sua maneira. Procuravam-se versões, repetia-se trabalho, e integrar alguém novo demorava dias.',
+    approach:
+      'Desenhámos uma estrutura partilhada com regras de nomes e de versões, e acompanhámos a equipa na adoção, com um guia simples para se manter.',
+    outcome:
+      'A equipa passou a encontrar tudo no mesmo sítio e a integrar novos elementos em minutos, sem depender de ninguém em particular.',
+    metrics: [
+      { value: '~4h', label: 'por semana recuperadas' },
+      { value: 'dias → min', label: 'para integrar alguém' },
+      { value: '1', label: 'estrutura para toda a equipa' },
+    ],
+    testimonial: null,
   },
 ];
 
