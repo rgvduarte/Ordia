@@ -30,8 +30,8 @@ export default function ServicosPage() {
     <>
       <PageHeader
         eyebrow="Serviços"
-        title="Quatro formas de trabalhar consigo"
-        intro="Cada serviço resolve uma parte da vida. Pode começar por um e crescer para uma avença. Todos os valores são sem IVA."
+        title="Comece pelo diagnóstico. Crescemos a partir daí."
+        intro="Tudo começa com um diagnóstico gratuito. Depois, a Ordia desenha e dirige um projeto pontual ou uma avença mensal, conforme o que mais pesa. Valores sem IVA."
       />
 
       <section className="container-ordia space-y-6 pb-12">
@@ -41,7 +41,14 @@ export default function ServicosPage() {
             className="reveal grid gap-8 rounded-[10px] border border-umbra/10 bg-areia/40 p-8 sm:p-10 lg:grid-cols-[1.618fr_1fr]"
           >
             <div>
-              <h2 className="font-grotesk text-phi3 tracking-tighter text-umbra">
+              <p className="label-mono">
+                {s.unit === 'mês'
+                  ? 'Avença mensal'
+                  : s.slug === 'evento'
+                    ? 'Add-on'
+                    : 'Projeto'}
+              </p>
+              <h2 className="mt-3 font-grotesk text-phi3 tracking-tighter text-umbra">
                 {s.name}
               </h2>
               <p className="mt-2 text-phi2 text-umbra/80">{s.promise}</p>

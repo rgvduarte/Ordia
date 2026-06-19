@@ -3,9 +3,9 @@
 
 export const siteConfig = {
   name: 'Ordia',
-  tagline: 'Estúdio de gestão e organização de vida, casa e património.',
+  tagline: 'A sua casa e a sua vida em ordem, sem ter de gerir nada.',
   description:
-    'A Ordia é um estúdio premium que organiza a sua vida digital, a sua casa e o seu património, e mantém tudo a funcionar. Marque um diagnóstico gratuito de 30 minutos.',
+    'A Ordia põe a sua casa e a sua vida em ordem, e mantém tudo assim, sem que tenha de gerir nada. Concebemos o sistema à medida e dirigimos toda a execução. Marque um diagnóstico gratuito de 30 minutos.',
   url: 'https://rgvduarte.github.io/Ordia',
   locale: 'pt-PT',
   email: 'ola@ordia.pt',
@@ -22,6 +22,36 @@ export const nav = [
   { href: '/casos', label: 'Casos' },
   { href: '/sobre', label: 'Sobre' },
   { href: '/diario', label: 'Diário' },
+];
+
+// A oferta, em termos inequívocos (skill: offers + copywriting).
+export const offer = {
+  // Promessa única / USP, para o herói.
+  headline: 'A sua casa e a sua vida em ordem, sem ter de gerir nada.',
+  subhead:
+    'A Ordia concebe o sistema que organiza a sua casa, a sua vida digital e o dia a dia, e dirige toda a execução. Uma só pessoa de confiança a tratar de tudo, para que recupere tempo e tranquilidade.',
+  // Reversão de risco junto aos CTA.
+  riskReversal: '30 minutos, sem compromisso. Sai com um plano claro, marque ou não connosco.',
+  // Para quem é (afia o nicho).
+  audience:
+    'Para donos de segunda casa, famílias com duas carreiras e quem tem uma vida cheia e pouco tempo.',
+};
+
+// O que a Ordia entrega, em três frentes (uma oferta, três áreas, não quatro
+// serviços a competir). Skill: copywriting (benefício, especificidade).
+export const valueProps = [
+  {
+    title: 'Tempo e cabeça de volta',
+    body: 'Deixa de gerir tarefas, fornecedores e decisões. A Ordia trata de tudo por si.',
+  },
+  {
+    title: 'Um só ponto de confiança',
+    body: 'Uma só pessoa pensa o conjunto, dirige a execução e responde por tudo, do início ao fim.',
+  },
+  {
+    title: 'Ordem que se mantém',
+    body: 'Não é arrumar uma vez. É um sistema desenhado para durar, com acompanhamento.',
+  },
 ];
 
 // Posicionamento: a Ordia concebe e dirige; coordena os profissionais que

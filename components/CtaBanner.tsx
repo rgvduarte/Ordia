@@ -22,6 +22,9 @@ export function CtaBanner() {
           >
             Marcar diagnóstico gratuito
           </Link>
+          <p className="mt-4 text-phi1 text-umbra/70">
+            30 minutos, sem compromisso. Sai com um plano claro.
+          </p>
         </div>
       </div>
     </section>
