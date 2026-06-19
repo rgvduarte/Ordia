@@ -76,6 +76,54 @@ export const positioning = {
   ],
 };
 
+// Escada de valor: o caminho do cliente, com um só ponto de entrada.
+export const valueLadder = [
+  {
+    step: '1',
+    name: 'Diagnóstico',
+    tag: 'Gratuito',
+    body: 'Uma conversa de 30 minutos. Percebemos o que pesa e mostramos por onde começar. Sai com um plano claro.',
+  },
+  {
+    step: '2',
+    name: 'Projeto',
+    tag: 'Ordem Digital ou Sistema Casa',
+    body: 'Desenhamos o sistema e dirigimos a execução, num projeto com âmbito e orçamento definidos.',
+  },
+  {
+    step: '3',
+    name: 'Avença',
+    tag: 'Concierge mensal',
+    body: 'Para quem quer manter a ordem viva: somos o ponto de confiança que coordena tudo, todos os meses.',
+  },
+  {
+    step: '4',
+    name: 'Add-on',
+    tag: 'Evento',
+    body: 'Quando há um momento a celebrar, concebemos e dirigimos o evento, sem peso para si.',
+  },
+];
+
+// A nossa promessa (reversão de risco honesta e cumprível). Skill: offers.
+export const promisepoints = [
+  {
+    title: 'Diagnóstico sem compromisso',
+    body: 'Se não virmos como ajudar, dizemos-lo. Não vendemos o que não faz sentido para si.',
+  },
+  {
+    title: 'Plano e orçamento claros antes de avançar',
+    body: 'Sabe exatamente o âmbito e o investimento antes de decidir. Sem surpresas.',
+  },
+  {
+    title: 'Acompanhamos até estar a funcionar',
+    body: 'Não fechamos um projeto enquanto o sistema não estiver a funcionar como combinado.',
+  },
+  {
+    title: 'Discrição absoluta',
+    body: 'O que vemos da sua casa e da sua vida fica connosco. Sempre.',
+  },
+];
+
 export const methodSteps = [
   {
     n: '01',
