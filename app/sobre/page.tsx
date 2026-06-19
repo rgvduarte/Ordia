@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { PageHeader } from '@/components/PageHeader';
 import { CtaBanner } from '@/components/CtaBanner';
 
@@ -7,6 +8,10 @@ export const metadata: Metadata = {
   description:
     'Daniela dos Santos Duarte, fundadora da Ordia. Quinze anos a construir e a gerir marcas de grande escala, agora ao serviço da ordem na vida, na casa e no património.',
 };
+
+// O next/image não prefixa o basePath ao src; fazemo-lo aqui para o
+// GitHub Pages (servido em /Ordia).
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const valores = [
   {
@@ -101,11 +106,15 @@ export default function SobrePage() {
       {/* Bio + foto */}
       <section className="container-ordia pb-16">
         <div className="reveal grid gap-10 lg:grid-cols-[1fr_1.618fr] lg:items-start">
-          <div className="overflow-hidden rounded-[10px] border border-umbra/10 bg-areia/60">
-            {/* Foto editável: substituir por retrato da fundadora */}
-            <div className="flex aspect-[1/1.2] items-center justify-center">
-              <span className="label-mono text-umbra/40">Retrato de Daniela</span>
-            </div>
+          <div className="relative aspect-[1/1.2] overflow-hidden rounded-[10px] border border-umbra/10 bg-areia/60">
+            <Image
+              src={`${basePath}/daniela.jpg`}
+              alt="Retrato de Daniela dos Santos Duarte, fundadora da Ordia"
+              fill
+              sizes="(min-width: 1024px) 38vw, 100vw"
+              className="object-cover object-top"
+              priority
+            />
           </div>
           <div className="space-y-5 text-phi2 text-taupe">
             <p>
@@ -244,6 +253,7 @@ export default function SobrePage() {
             '@type': 'Person',
             name: 'Daniela dos Santos Duarte',
             jobTitle: 'Fundadora da Ordia',
+            image: 'https://rgvduarte.github.io/Ordia/daniela.jpg',
             worksFor: { '@type': 'Organization', name: 'Ordia' },
             alumniOf: 'Universidade Católica Portuguesa',
             sameAs: 'https://www.linkedin.com/in/dmsduarte/',
