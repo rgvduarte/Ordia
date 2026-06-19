@@ -76,6 +76,54 @@ export const positioning = {
   ],
 };
 
+// Escada de valor: o caminho do cliente, com um só ponto de entrada.
+export const valueLadder = [
+  {
+    step: '1',
+    name: 'Diagnóstico',
+    tag: 'Gratuito',
+    body: 'Uma conversa de 30 minutos. Percebemos o que pesa e mostramos por onde começar. Sai com um plano claro.',
+  },
+  {
+    step: '2',
+    name: 'Projeto',
+    tag: 'Ordem Digital ou Sistema Casa',
+    body: 'Desenhamos o sistema e dirigimos a execução, num projeto com âmbito e orçamento definidos.',
+  },
+  {
+    step: '3',
+    name: 'Avença',
+    tag: 'Concierge mensal',
+    body: 'Para quem quer manter a ordem viva: somos o ponto de confiança que coordena tudo, todos os meses.',
+  },
+  {
+    step: '4',
+    name: 'Add-on',
+    tag: 'Evento',
+    body: 'Quando há um momento a celebrar, concebemos e dirigimos o evento, sem peso para si.',
+  },
+];
+
+// A nossa promessa (reversão de risco honesta e cumprível). Skill: offers.
+export const promisepoints = [
+  {
+    title: 'Diagnóstico sem compromisso',
+    body: 'Se não virmos como ajudar, dizemos-lo. Não vendemos o que não faz sentido para si.',
+  },
+  {
+    title: 'Plano e orçamento claros antes de avançar',
+    body: 'Sabe exatamente o âmbito e o investimento antes de decidir. Sem surpresas.',
+  },
+  {
+    title: 'Acompanhamos até estar a funcionar',
+    body: 'Não fechamos um projeto enquanto o sistema não estiver a funcionar como combinado.',
+  },
+  {
+    title: 'Discrição absoluta',
+    body: 'O que vemos da sua casa e da sua vida fica connosco. Sempre.',
+  },
+];
+
 export const methodSteps = [
   {
     n: '01',
@@ -183,34 +231,80 @@ export const testimonials = [
   },
 ];
 
+// EDITÁVEL: casos representativos. Substituir por dados e números reais de
+// cliente (com autorização) antes de campanhas pagas. Nomes anonimizados.
 export const cases = [
   {
     slug: 'villa-cascais',
     title: 'Villa em Cascais devolvida à calma',
     segment: 'Segunda casa',
     summary:
-      'Uma villa usada poucos meses por ano, sempre em modo de emergência à chegada. Criámos um sistema de casa e uma avença de concierge.',
+      'Uma villa usada poucos meses por ano, sempre em modo de emergência à chegada. A Ordia desenhou o sistema da casa e assumiu uma avença de concierge.',
     before: 'Chegadas caóticas, despensas sem regra, fornecedores dispersos.',
     after:
-      'Casa pronta a cada chegada, inventário claro e um único ponto de contacto para tudo.',
+      'Casa pronta a cada chegada, inventário claro e um único ponto de contacto.',
+    challenge:
+      'A cada visita, os donos chegavam a uma casa fria: despensa por fazer, piscina por tratar, nove fornecedores diferentes a contactar à última hora. As primeiras 48 horas de cada estadia perdiam-se a organizar, em vez de a descansar.',
+    approach:
+      'Desenhámos o sistema da casa (inventário, despensa-base, manutenção) e passámos a dirigir os fornecedores numa só avença. Antes de cada chegada, coordenamos tudo para que a casa esteja pronta.',
+    outcome:
+      'Os donos passaram a chegar a uma casa a postos, com um só contacto para tudo. As estadias começam a descansar, não a resolver.',
+    metrics: [
+      { value: '9 → 1', label: 'fornecedores num só contacto' },
+      { value: '48h → 0', label: 'tempo a preparar à chegada' },
+      { value: '100%', label: 'chegadas com a casa pronta' },
+    ],
+    testimonial: {
+      quote:
+        'Chegamos e está tudo a postos. Mudou a forma como vivemos a casa.',
+      author: 'Família M.',
+    },
   },
   {
     slug: 'arquivo-digital-familia',
     title: 'Vinte anos de memórias, organizados',
     segment: 'Família',
     summary:
-      'Milhares de fotografias e documentos espalhados por telemóveis, discos e contas. Estruturámos, limpámos e protegemos tudo.',
+      'Milhares de fotografias e documentos espalhados por telemóveis, discos e contas. A Ordia desenhou a estrutura e dirigiu a limpeza e a proteção de tudo.',
     before: 'Duplicados, ficheiros perdidos, sem cópias de segurança.',
     after: 'Arquivo único, com nomes, datas e cópia segura na nuvem.',
+    challenge:
+      'Vinte anos de fotografias e documentos viviam em três telemóveis, dois discos antigos e várias contas. Procurar um documento podia levar uma tarde, e nada tinha cópia de segurança.',
+    approach:
+      'Desenhámos uma estrutura única (pastas, nomes, datas, regras) e dirigimos a consolidação: juntar tudo, eliminar duplicados e configurar uma cópia segura automática.',
+    outcome:
+      'A família passou a ter um só arquivo, encontrável em segundos e protegido. As memórias deixaram de estar reféns de um disco que podia falhar.',
+    metrics: [
+      { value: '~14.000', label: 'ficheiros consolidados' },
+      { value: '3 → 1', label: 'dispositivos num só arquivo' },
+      { value: 'minutos', label: 'para encontrar, antes horas' },
+    ],
+    testimonial: {
+      quote:
+        'Finalmente tudo organizado e seguro. Sinto que recuperei a minha memória.',
+      author: 'Sofia R.',
+    },
   },
   {
     slug: 'escritorio-pme',
     title: 'Uma PME que deixou de perder tempo',
     segment: 'Empresa',
     summary:
-      'Documentos e processos sem dono. Desenhámos uma estrutura partilhada e regras simples para a equipa.',
+      'Documentos e processos sem dono. A Ordia desenhou uma estrutura partilhada e regras simples, e dirigiu a sua adoção pela equipa.',
     before: 'Versões duplicadas, pastas caóticas, tempo perdido a procurar.',
-    after: 'Estrutura partilhada, regras claras e onboarding em minutos.',
+    after: 'Estrutura partilhada, regras claras e integração em minutos.',
+    challenge:
+      'Numa equipa pequena, cada pessoa guardava ficheiros à sua maneira. Procuravam-se versões, repetia-se trabalho, e integrar alguém novo demorava dias.',
+    approach:
+      'Desenhámos uma estrutura partilhada com regras de nomes e de versões, e acompanhámos a equipa na adoção, com um guia simples para se manter.',
+    outcome:
+      'A equipa passou a encontrar tudo no mesmo sítio e a integrar novos elementos em minutos, sem depender de ninguém em particular.',
+    metrics: [
+      { value: '~4h', label: 'por semana recuperadas' },
+      { value: 'dias → min', label: 'para integrar alguém' },
+      { value: '1', label: 'estrutura para toda a equipa' },
+    ],
+    testimonial: null,
   },
 ];
 
@@ -218,18 +312,44 @@ export const resources = [
   {
     slug: 'guia-por-onde-comecar',
     kind: 'Guia gratuito',
+    format: 'guide',
+    time: '5 min de leitura',
     title: 'Por onde começar a pôr ordem',
     promise:
-      'O guia que mostra os três erros que mantêm a desordem e o primeiro passo para cada área da sua vida.',
+      'Os três erros que mantêm a desordem e o primeiro passo para cada área da sua vida. Leia já o essencial aqui; receba o guia completo em PDF por email.',
     bullets: [
       'Os três erros que mantêm a desordem',
       'O método em quatro passos, resumido',
       'Uma lista para começar este fim de semana',
     ],
+    // Conteúdo real e útil (preview do guia). Skill: lead-magnets.
+    errors: [
+      {
+        title: 'Erro 1: confundir arrumar com organizar',
+        body: 'Arrumar é pôr as coisas no sítio hoje. Organizar é criar um sistema que decide, sozinho, onde tudo fica. Sem sistema, a desordem volta sempre em semanas.',
+      },
+      {
+        title: 'Erro 2: começar pelo mais visível, não pelo que mais pesa',
+        body: 'Arruma-se a gaveta à vista e adia-se o arquivo digital ou os fornecedores, que são o que realmente rouba tempo e cabeça. Comece pelo que pesa, não pelo que se vê.',
+      },
+      {
+        title: 'Erro 3: não definir quem mantém',
+        body: 'Um sistema sem dono morre. Antes de arrumar, decida quem mantém cada área e com que rotina. É isso que faz a ordem durar.',
+      },
+    ],
+    checklist: [
+      'Escolha a área que mais lhe pesa: digital, casa ou recorrente.',
+      'Escreva onde "vive" cada tipo de coisa (uma regra por categoria).',
+      'Elimine duplicados e o que não serve, antes de arrumar.',
+      'Defina uma rotina semanal de 15 minutos para manter.',
+      'Marque um diagnóstico se quiser um sistema feito à medida.',
+    ],
   },
   {
     slug: 'quiz-tipo-de-desordem',
     kind: 'Quiz',
+    format: 'quiz',
+    time: '2 minutos',
     title: 'Que tipo de desordem o trava?',
     promise:
       'Responda a seis perguntas e descubra qual o sistema da Ordia que mais lhe vai mudar o dia a dia.',
