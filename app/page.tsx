@@ -3,7 +3,15 @@ import { GoldenSpiral } from '@/components/GoldenSpiral';
 import { BeforeAfter } from '@/components/BeforeAfter';
 import { CtaBanner } from '@/components/CtaBanner';
 import { LeadForm } from '@/components/LeadForm';
-import { methodSteps, services, testimonials, cases, positioning } from '@/lib/site';
+import {
+  methodSteps,
+  services,
+  testimonials,
+  cases,
+  positioning,
+  offer,
+  valueProps,
+} from '@/lib/site';
 import { priceLabel, IVA_NOTE } from '@/lib/format';
 
 export default function HomePage() {
@@ -14,16 +22,11 @@ export default function HomePage() {
         <GoldenSpiral className="pointer-events-none absolute right-[-6rem] top-[-4rem] h-[34rem] w-[34rem] text-argila opacity-60" />
         <div className="container-ordia relative grid gap-12 py-24 lg:grid-cols-[1.618fr_1fr] lg:items-center lg:py-32">
           <div className="reveal">
-            <p className="label-mono">Estúdio de organização premium · Portugal</p>
+            <p className="label-mono">Gestão de casa e vida · Portugal</p>
             <h1 className="mt-6 font-grotesk text-phi4 leading-[1.04] tracking-tightest text-umbra sm:text-phi5">
-              A sua vida, casa e património em ordem.
+              {offer.headline}
             </h1>
-            <p className="mt-6 max-w-xl text-phi2 text-taupe">
-              Desenhamos os sistemas que dão ordem à sua vida digital, à sua
-              casa e ao seu património, e coordenamos quem os concretiza. Uma só
-              pessoa de confiança a pensar o conjunto, para que recupere tempo e
-              tranquilidade.
-            </p>
+            <p className="mt-6 max-w-xl text-phi2 text-taupe">{offer.subhead}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/diagnostico"
@@ -32,29 +35,37 @@ export default function HomePage() {
                 Marcar diagnóstico gratuito
               </Link>
               <Link
-                href="/metodo"
+                href="/como-trabalhamos"
                 className="inline-flex justify-center rounded-md border border-umbra/20 px-6 py-3.5 font-medium text-umbra transition-colors hover:bg-linho"
               >
-                Conhecer o método
+                Como trabalhamos
               </Link>
             </div>
+            <p className="mt-4 text-phi1 text-taupe">{offer.riskReversal}</p>
           </div>
 
           <div className="reveal rounded-[14px] border border-umbra/10 bg-areia/60 p-8">
-            <p className="label-mono">O que fica resolvido</p>
-            <ul className="mt-5 space-y-4">
-              {[
-                'Um arquivo digital organizado e seguro',
-                'Uma casa que se mantém em ordem sem esforço',
-                'Um único ponto de confiança para tudo o que é recorrente',
-              ].map((item) => (
-                <li key={item} className="flex gap-3 text-umbra">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-umbra/70" />
-                  <span>{item}</span>
+            <p className="label-mono">O que ganha</p>
+            <ul className="mt-5 space-y-5">
+              {valueProps.map((v) => (
+                <li key={v.title}>
+                  <p className="font-grotesk text-phi2 tracking-tight text-umbra">
+                    {v.title}
+                  </p>
+                  <p className="mt-1 text-[0.95rem] text-taupe">{v.body}</p>
                 </li>
               ))}
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Para quem */}
+      <section className="border-y border-umbra/10 bg-linho">
+        <div className="container-ordia py-6">
+          <p className="reveal text-center font-grotesk text-phi2 tracking-tight text-umbra">
+            {offer.audience}
+          </p>
         </div>
       </section>
 
@@ -142,13 +153,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Serviços */}
+      {/* Serviços: uma oferta, aplicada onde mais pesa */}
       <section className="container-ordia py-24">
-        <div className="reveal">
-          <p className="label-mono">Serviços</p>
+        <div className="reveal max-w-2xl">
+          <p className="label-mono">Onde a Ordia entra</p>
           <h2 className="mt-4 font-grotesk text-phi4 tracking-tighter text-umbra">
-            Quatro formas de trabalhar consigo
+            Um estúdio, um método, aplicado onde mais pesa
           </h2>
+          <p className="mt-4 text-taupe">
+            Começa sempre com um diagnóstico. A partir daí, desenhamos e
+            dirigimos o que precisa, num projeto pontual ou numa avença mensal.
+          </p>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {services.map((s) => (
@@ -156,7 +171,14 @@ export default function HomePage() {
               key={s.slug}
               className="reveal flex flex-col rounded-[10px] border border-umbra/10 bg-areia/40 p-8"
             >
-              <h3 className="font-grotesk text-phi3 tracking-tighter text-umbra">
+              <p className="label-mono">
+                {s.unit === 'mês'
+                  ? 'Avença mensal'
+                  : s.slug === 'evento'
+                    ? 'Add-on'
+                    : 'Projeto'}
+              </p>
+              <h3 className="mt-3 font-grotesk text-phi3 tracking-tighter text-umbra">
                 {s.name}
               </h3>
               <p className="mt-2 text-taupe">{s.promise}</p>
