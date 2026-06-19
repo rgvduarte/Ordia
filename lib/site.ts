@@ -14,11 +14,10 @@ export const siteConfig = {
     process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || 'https://formspree.io/f/your-id',
   gaId: process.env.NEXT_PUBLIC_GA_ID || '',
   // Veículo comercial: a Ordia é uma marca explorada por esta sociedade.
-  // EDITÁVEL: preencher NIF e sede com os dados do registo (racius/portal).
   legalEntity: {
-    name: 'Flammable Unipessoal, Lda',
-    nif: '', // NIPC, a preencher
-    address: '', // sede social, a preencher
+    name: 'Flammable, Unipessoal Lda',
+    nif: '518765709',
+    address: 'Rua de Viana do Alentejo, n.º 26, 2605-882 Casal de Cambra, Sintra',
   },
 };
 
