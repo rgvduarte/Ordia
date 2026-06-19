@@ -30,8 +30,8 @@ export default function TermosPage() {
         </Block>
         <Block title="Utilização do site">
           O conteúdo deste site destina-se a informar sobre os serviços da Ordia.
-          Os valores apresentados são indicativos, sem IVA, e podem variar
-          consoante o âmbito de cada projeto.
+          Os valores apresentados são indicativos, com IVA incluído, e podem
+          variar consoante o âmbito de cada projeto.
         </Block>
         <Block title="Propriedade intelectual">
           Os textos, a marca Ordia e os elementos visuais são propriedade de{' '}

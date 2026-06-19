@@ -93,7 +93,7 @@ export function Footer() {
             {siteConfig.legalEntity.name}. Todos os direitos reservados.
           </p>
           <p className="font-mono uppercase tracking-[0.18em]">
-            Lisboa, Portugal · Valores sem IVA
+            Lisboa, Portugal
           </p>
         </div>
       </div>
