@@ -7,7 +7,7 @@ import { priceLabel, IVA_NOTE } from '@/lib/format';
 export const metadata: Metadata = {
   title: 'Serviços',
   description:
-    'Ordem Digital, Sistema Casa, Concierge e Evento. Âmbito, resultado e preço de cada serviço da Ordia. Valores sem IVA.',
+    'Ordem Digital, Sistema Casa, Concierge e Evento. Âmbito, resultado e preço de cada serviço da Ordia. Valores com IVA incluído.',
 };
 
 const serviceJsonLd = {
@@ -31,7 +31,7 @@ export default function ServicosPage() {
       <PageHeader
         eyebrow="Serviços"
         title="Comece pelo diagnóstico. Crescemos a partir daí."
-        intro="Tudo começa com um diagnóstico gratuito. Depois, a Ordia desenha e dirige um projeto pontual ou uma avença mensal, conforme o que mais pesa. Valores sem IVA."
+        intro="Tudo começa com um diagnóstico gratuito. Depois, a Ordia desenha e dirige um projeto pontual ou uma avença mensal, conforme o que mais pesa. Valores com IVA incluído."
       />
 
       <section className="container-ordia space-y-6 pb-12">
