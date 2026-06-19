@@ -88,7 +88,10 @@ export function Footer() {
         </div>
 
         <div className="rule mt-12 flex flex-col gap-2 pt-6 text-phi1 text-taupe sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Ordia. Todos os direitos reservados.</p>
+          <p>
+            © {new Date().getFullYear()} Ordia, marca de{' '}
+            {siteConfig.legalEntity.name}. Todos os direitos reservados.
+          </p>
           <p className="font-mono uppercase tracking-[0.18em]">
             Lisboa, Portugal · Valores sem IVA
           </p>

@@ -18,7 +18,11 @@ export default function PrivacidadePage() {
       />
       <section className="container-ordia max-w-3xl space-y-8 pb-16 text-umbra/90">
         <Block title="Responsável pelo tratamento">
-          A Ordia é responsável pelo tratamento dos dados recolhidos neste site.
+          {siteConfig.legalEntity.name}, sociedade que explora a marca Ordia
+          {siteConfig.legalEntity.nif
+            ? ` (NIPC ${siteConfig.legalEntity.nif})`
+            : ''}
+          , é a responsável pelo tratamento dos dados recolhidos neste site.
           Para qualquer questão, contacte{' '}
           <a href={`mailto:${siteConfig.email}`} className="underline">
             {siteConfig.email}
